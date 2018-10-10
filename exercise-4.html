@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var securityCode = parseInt(prompt('Enter your security code'));
+    function checkSecurityCode(securityCode) {
+        check = /^[0-9]{6}$/;
+        if (check.test(securityCode)){
+            alert('your security code is correct');
+        }
+        else alert('your security code is incorrect, press F5 to try again');
+    }
+    checkSecurityCode(securityCode);
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Date = function (day, month, year) {
+        this.day=day;
+        this.month=month;
+        this.year=year;
+
+        this.getDays = function () {
+            if (this.statusDay)
+                return this.day;
+            return this.day = 'a';
+        };
+        this.getMonths = function () {
+            if (this.statusMonth)
+                return this.month;
+            return this.month='a';
+        };
+        this.getYears = function () {
+            if (this.statusYear)
+                return this.year;
+            return this.month='a';
+        };
+        this.checkMonths =function () {
+            if (parseInt(this.month) <= 12 && this.month !==0 )
+                return this.statusMonth=true ;
+            return this.statusMonth=false
+        };
+        this.checkDays =function () {
+            if (parseInt(this.day) <= 31 && this.day !==0)
+                return this.statusDay=true ;
+            return this.statusDay =false;
+        };
+        this.checkYears =function () {
+            if (parseInt(this.year) <= 9999 && this.year !==0)
+                return this.statusYear=true ;
+            return this.statusYear =false;
+        };
+    };
+    var text = prompt('enter your string');
+    var arr = text.split('/');
+    var a = new Date(arr[0],arr[1],arr[2]);
+    a.checkDays();
+    a.checkYears();
+    a.checkMonths();
+    var b = a.getDays()+'/'+a.getMonths()+'/'+a.getYears();
+    function checkDate(a) {
+        check = /^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$/;
+        if (check.test(a))
+            alert('your text is similar with default of date');
+        else alert("your text isn't similar with default of date");
+    }
+        checkDate(b);
+</script>
+</body>
+</html>

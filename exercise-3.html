@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = prompt('Enter your string');
+    function countVowel(str) {
+        checkVowel = /[AEIOUYaeiouy]/g;
+        var arrVowel = str.match(checkVowel);
+        if (arrVowel === null) {
+            alert('your string have 0 vowel');
+        } else alert('your string have ' + arrVowel.length + ' vowel');
+    }
+    function countConsonant(str) {
+        checkConsonant = /[BCDFGHJKLMNPQRSTVWXZbcdfghjklmnpqrstvwxz]/g;
+        var arrConsonant = str.match(checkConsonant);
+        if (arrConsonant === null) {
+            alert('your string have 0 consonant');
+        } else alert('your string have ' + arrConsonant.length + ' consonant');
+    }
+    countVowel(str);
+    countConsonant(str);
+</script>
+</body>
+</html>

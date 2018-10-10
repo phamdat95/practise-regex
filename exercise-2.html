@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = prompt('Enter your string:');
+    function countNumber(str) {
+        var check = /[0-9]/g;
+        var arrNumber = str.match(check);
+        if (arrNumber === null){
+            alert('your string have 0 number');}
+        else alert('your string have ' + arrNumber.length + ' number');
+    }
+    countNumber(str);
+</script>
+</body>
+</html>
